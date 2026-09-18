@@ -1,0 +1,55 @@
+:root {
+  --paper: #ffffff;
+  --ink: #111214;
+  --mute: #6b7280;
+  --line: #e5e7eb;
+  --accent: #2563eb;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.5 -apple-system, "SF Pro Text", "Sarabun", "Noto Sans Thai", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 920px; margin: 0 auto; padding: 32px 24px 64px; }
+
+.eyebrow { font: 600 11px/1 ui-monospace, "SF Mono", monospace; letter-spacing: 0.18em; color: var(--mute); margin: 0 0 8px; }
+h1 { margin: 0 0 6px; font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
+.sub { margin: 0 0 24px; color: var(--mute); font-size: 14px; }
+
+.grid { display: grid; grid-template-columns: 1fr 280px; gap: 20px; align-items: start; }
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+
+.playerBox { position: relative; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; }
+
+.panel { border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+.label { font: 600 11px/1 ui-monospace, monospace; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); margin: 0 0 10px; }
+.big { margin: 0; font: 600 44px/1 ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+.big span { font-size: 20px; color: var(--mute); }
+.frac { margin: 4px 0 14px; color: var(--mute); font-variant-numeric: tabular-nums; }
+
+dl { margin: 0 0 16px; border-top: 1px solid var(--line); }
+dl > div { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); }
+dt { color: var(--mute); font-size: 13px; }
+dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+.btns { display: flex; flex-wrap: wrap; gap: 8px; }
+button {
+  border: 1px solid var(--ink); background: #fff; color: var(--ink);
+  border-radius: 8px; padding: 7px 14px; font-size: 13px; cursor: pointer;
+}
+button:hover { background: var(--ink); color: #fff; }
+button.primary { background: var(--ink); color: #fff; }
+button.primary:hover { background: #000; }
+
+.timeline { margin-top: 24px; }
+.track {
+  position: relative; height: 36px;
+  background: #f5f5f4; border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+}
+.seg { position: absolute; top: 8px; bottom: 8px; background: var(--ink); border-radius: 3px; }
+
+footer { margin-top: 32px; color: var(--mute); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
+code { background: #f5f5f4; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
